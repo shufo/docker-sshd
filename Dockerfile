@@ -10,6 +10,7 @@ RUN apt-get install openssh-server -y
 ADD ssh/id_rsa.pub /root/.ssh/authorized_keys
 RUN chmod 700 /root/.ssh && chmod 600 /root/.ssh/authorized_keys
 RUN mkdir /var/run/sshd
+RUN chmod 700 /var/run/sshd
 RUN mkdir /var/log/ssh
 
 # set root password to `root`
